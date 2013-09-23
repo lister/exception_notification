@@ -5,6 +5,6 @@
   </li>
   <li>
     <strong>data: </strong>
-    <span><%= raw PP.pp(@request.session, "") %></span>
+    <%= render partial: "value", object: @request.session %>
   </li>
 </ul>
