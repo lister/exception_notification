@@ -2,7 +2,7 @@
 <span> 
   <% if defined?(value) %>
     <% if value.kind_of?(Hash) || value.kind_of?(Array) %>
-      <pre><%= AwesomePrint::Inspector.new(plain: true).awesome value %></pre>
+      <pre><%= AwesomePrint::Inspector.new(plain: true).awesome(value) rescue value.inspect %></pre>
 
     <% else %>
       <%= value %></span>
