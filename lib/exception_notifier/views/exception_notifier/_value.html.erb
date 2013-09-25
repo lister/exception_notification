@@ -1,0 +1,13 @@
+
+<span> 
+  <% if defined?(value) %>
+    <% if value.kind_of?(Hash) || value.kind_of?(Array) %>
+      <pre><%= AwesomePrint::Inspector.new(plain: true).awesome value %></pre>
+
+    <% else %>
+      <%= value %></span>
+
+    <% end %>
+  <% end %>
+</span>
+
